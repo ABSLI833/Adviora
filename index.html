@@ -285,22 +285,67 @@ margin:5px 0 0;
 font-size:13px;
 color:#666;
 }
-/* ================= SECTIONS ================= */
+/* ================= OPPORTUNITY ================= */
 
-section{
+.opportunity{
 padding:80px 5%;
 }
 
-.section-title{
-text-align:center;
-font-size:28px;
+.opportunity-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+}
+
+/* LEFT */
+.opportunity-left{
+width:50%;
+}
+
+.opportunity-left h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.opportunity-sub{
+color:#555;
+margin-bottom:20px;
+max-width:500px;
+}
+
+/* POINTS */
+.opportunity-points{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
 margin-bottom:20px;
 }
 
-/* PLACEHOLDER */
-.placeholder{
-text-align:center;
-color:#666;
+.opportunity-points div{
+font-size:14px;
+color:#333;
+}
+
+/* HIGHLIGHT BOX */
+.opportunity-highlight{
+background:#f9f9f9;
+padding:15px;
+border-radius:8px;
+border-left:4px solid #d32f2f;
+font-size:14px;
+color:#333;
+}
+
+/* RIGHT IMAGE */
+.opportunity-right{
+width:50%;
+}
+
+.opportunity-right img{
+width:100%;
+border-radius:10px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
 }
 
 </style>
@@ -396,9 +441,43 @@ color:#666;
 
 <!-- ================= OPPORTUNITY ================= -->
 
-<section id="opportunity">
-  <h2 class="section-title">Opportunity</h2>
-  <p class="placeholder">Content coming next...</p>
+<section id="opportunity" class="opportunity">
+
+  <div class="opportunity-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="opportunity-left">
+
+      <h2>A Career Opportunity Like No Other</h2>
+
+      <p class="opportunity-sub">
+        Build a career where you control your time, income, and growth. Start your journey with a trusted brand and unlock new possibilities.
+      </p>
+
+      <!-- POINTS -->
+      <div class="opportunity-points">
+
+        <div>✔ Work on your own terms</div>
+        <div>✔ No investment required</div>
+        <div>✔ Flexible part-time / full-time</div>
+        <div>✔ Unlimited earning potential</div>
+
+      </div>
+
+      <!-- HIGHLIGHT BOX -->
+      <div class="opportunity-highlight">
+        Start with zero investment and build your own income stream with expert support.
+      </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="opportunity-right">
+      <img src="career.png" alt="Career Growth">
+    </div>
+
+  </div>
+
 </section>
 
 <!-- ================= INCOME ================= -->
