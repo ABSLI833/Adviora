@@ -293,21 +293,24 @@ padding:80px 5%;
 
 .opportunity-container{
 display:flex;
-align-items:center;  /* IMPORTANT */
+align-items:flex-start;   /* 🔥 CHANGE THIS */
 justify-content:space-between;
-gap:40px;
+gap:20px;
 }
 
 /* LEFT */
 .opportunity-left{
 width:50%;
-padding-right:20px;
+padding-right:10px;
+margin-top:0;   /* ensure no push */
 }
 
 .opportunity-left h2{
 font-size:36px;   /* INCREASE */
 font-weight:700;
 margin-bottom:15px;
+.opportunity-left h2{
+margin-top:0;   /* 🔥 IMPORTANT */
 }
 
 .opportunity-sub{
@@ -332,13 +335,27 @@ color:#333;
 }
 
 /* HIGHLIGHT BOX */
-.opportunity-highlight{
-background:#f9f9f9;
-padding:15px;
+.opportunity-highlights{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin-top:15px;
+}
+
+/* EACH BOX */
+.highlight-box{
+background:#f5f5f5;
+padding:14px 16px;
 border-radius:8px;
+
+/* LEFT RED LINE */
 border-left:4px solid #d32f2f;
+
 font-size:14px;
 color:#333;
+
+/* MATCH WIDTH WITH TEXT */
+max-width:420px;
 }
 
 /* RIGHT IMAGE */
@@ -469,11 +486,21 @@ box-shadow:0 8px 25px rgba(0,0,0,0.05);
       </div>
 
       <!-- HIGHLIGHT BOX -->
-      <div class="opportunity-highlight">
-        Start with zero investment and build your own income stream with expert support.
-      </div>
+     <div class="opportunity-highlights">
 
-    </div>
+  <div class="highlight-box">
+    Start with zero investment and build your own income stream with expert support.
+  </div>
+
+  <div class="highlight-box">
+    Get complete training, mentorship, and guidance to grow step by step.
+  </div>
+
+  <div class="highlight-box">
+    Work at your own pace and create a flexible career that fits your lifestyle.
+  </div>
+
+</div>
 
     <!-- RIGHT IMAGE -->
     <div class="opportunity-right">
