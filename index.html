@@ -170,11 +170,36 @@ color:#555;
 /* RIGHT IMAGE */
 .hero-right{
 width:50%;
+height:450px;
+
+/* IMAGE */
+background:url("office.png") no-repeat center center/cover;
+
+/* SHAPE */
+border-radius:10px;
+
+/* THIS IS IMPORTANT */
+position:relative;
+overflow:hidden;
 }
 
-.hero-right img{
+/* WHITE FADE EFFECT (THIS MAKES IT PREMIUM) */
+.hero-right::before{
+content:"";
+position:absolute;
+left:0;
+top:0;
 width:100%;
-border-radius:10px;
+height:100%;
+
+/* gradient fade */
+background:linear-gradient(
+to right,
+#f9f9f9 5%,
+rgba(255,255,255,0.8) 20%,
+rgba(255,255,255,0.3) 40%,
+transparent 70%
+);
 }
 
 /* ================= SECTIONS ================= */
@@ -259,9 +284,7 @@ color:#666;
   </div>
 
   <!-- RIGHT IMAGE -->
-  <div class="hero-right">
-    <img src="office.png" alt="Office Work">
-  </div>
+  <div class="hero-right"></div>
 
 </section>
 
