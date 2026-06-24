@@ -91,32 +91,90 @@ background:#ffb300;
 transform:scale(1.05);
 }
 
-/* ================= HERO (TEMP BASIC) ================= */
+/* ================= HERO ================= */
 
 .hero{
-padding:100px 5%;
-text-align:center;
-background:linear-gradient(135deg,#2b2f77,#6a11cb);
-color:white;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:60px 5%;
+background:#f9f9f9;
 }
 
-.hero h1{
-font-size:36px;
-margin-bottom:15px;
+/* LEFT */
+.hero-left{
+width:50%;
 }
 
-.hero p{
+.hero-tag{
+color:#d32f2f;
+font-weight:bold;
+letter-spacing:1px;
+margin-bottom:10px;
+}
+
+.hero-left h1{
+font-size:48px;
+line-height:1.2;
+margin:0;
+}
+
+.hero-left h1 span{
+color:#d32f2f;
+}
+
+.hero-sub{
+margin:20px 0;
+color:#555;
 font-size:16px;
-margin-bottom:20px;
+max-width:500px;
 }
 
+/* POINTS */
+.hero-points{
+display:flex;
+gap:20px;
+margin-bottom:20px;
+flex-wrap:wrap;
+}
+
+.hero-points div{
+font-size:14px;
+color:#333;
+}
+
+/* BUTTON */
 .hero-btn{
-background:#ffcc00;
+display:inline-block;
+background:#d32f2f;
+color:white;
 padding:12px 25px;
 border-radius:25px;
 text-decoration:none;
-color:black;
 font-weight:bold;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+background:#b71c1c;
+transform:scale(1.05);
+}
+
+/* NOTE */
+.hero-note{
+margin-top:15px;
+font-size:14px;
+color:#555;
+}
+
+/* RIGHT IMAGE */
+.hero-right{
+width:50%;
+}
+
+.hero-right img{
+width:100%;
+border-radius:10px;
 }
 
 /* ================= SECTIONS ================= */
@@ -166,12 +224,45 @@ color:#666;
 
 </nav>
 
-<!-- ================= HERO ================= -->
-
+<!-- HERO SECTION -->
 <section class="hero">
-  <h1>Build a Career with Unlimited Income</h1>
-  <p>Start your journey as a Life Insurance Advisor with Aditya Birla Sun Life</p>
-  <a href="#apply" class="hero-btn">Join Now</a>
+
+  <!-- LEFT CONTENT -->
+  <div class="hero-left">
+
+    <p class="hero-tag">BUILD A MEANINGFUL CAREER</p>
+
+    <h1>
+      Unlimited Income.<br>
+      Flexible Time.<br>
+      <span>Bright Future.</span>
+    </h1>
+
+    <p class="hero-sub">
+      Join hands with Aditya Birla Sun Life Insurance and build a rewarding career as a Life Insurance Advisor.
+    </p>
+
+    <!-- POINTS -->
+    <div class="hero-points">
+      <div>💰 Unlimited Earning Potential</div>
+      <div>⏰ Flexible Working Hours</div>
+      <div>👥 No Investment Required</div>
+    </div>
+
+    <!-- BUTTON -->
+    <a href="#apply" class="hero-btn">Join Now →</a>
+
+    <p class="hero-note">
+      Be your own boss. Inspire lives. <b>Earn unlimited.</b>
+    </p>
+
+  </div>
+
+  <!-- RIGHT IMAGE -->
+  <div class="hero-right">
+    <img src="office.png" alt="Office Work">
+  </div>
+
 </section>
 
 <!-- ================= OPPORTUNITY ================= -->
