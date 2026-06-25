@@ -1699,6 +1699,857 @@ font-size:26px;
 }
 
 }
+/*====================================
+      JOURNEY LEFT TIMELINE
+====================================*/
+
+.journey{
+
+padding:100px 6%;
+
+background:#f8f9fb;
+
+}
+
+.journey-container{
+
+max-width:1400px;
+
+margin:auto;
+
+background:#ffffff;
+
+padding:60px;
+
+border-radius:24px;
+
+border:3px solid transparent;
+
+background-image:
+linear-gradient(#ffffff,#ffffff),
+linear-gradient(90deg,#d32f2f,#f4b400);
+
+background-origin:border-box;
+
+background-clip:padding-box,border-box;
+
+box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+}
+
+.journey-heading{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.journey-heading h2{
+
+font-size:42px;
+
+margin:18px 0;
+
+color:#222;
+
+}
+
+.journey-heading p{
+
+font-size:18px;
+
+color:#666;
+
+max-width:760px;
+
+margin:auto;
+
+line-height:1.8;
+
+}
+
+/*=========================
+    MAIN WRAPPER
+=========================*/
+
+.journey-wrapper{
+
+display:flex;
+
+gap:60px;
+
+align-items:flex-start;
+
+}
+
+.journey-left{
+
+width:55%;
+
+position:relative;
+
+}
+
+/*=========================
+      TIMELINE
+=========================*/
+
+.timeline{
+
+position:relative;
+
+padding-left:70px;
+
+}
+
+/* Vertical Line */
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:34px;
+
+top:0;
+
+bottom:0;
+
+width:4px;
+
+background:linear-gradient(
+180deg,
+#d32f2f,
+#f4b400
+);
+
+border-radius:20px;
+
+}
+
+/*=========================
+        STEP
+=========================*/
+
+.step{
+
+position:relative;
+
+background:#f9f9f9;
+
+border-radius:18px;
+
+padding:28px 28px 28px 75px;
+
+margin-bottom:35px;
+
+border-top:4px solid #d32f2f;
+
+border-bottom:4px solid #f4b400;
+
+box-shadow:0 10px 28px rgba(0,0,0,.06);
+
+transition:.35s;
+
+}
+
+.step:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+/*=========================
+      NUMBER CIRCLE
+=========================*/
+
+.step-number{
+
+position:absolute;
+
+left:-58px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:46px;
+
+height:46px;
+
+border-radius:50%;
+
+background:#d32f2f;
+
+color:#fff;
+
+font-size:20px;
+
+font-weight:700;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+box-shadow:0 8px 18px rgba(211,47,47,.35);
+
+z-index:3;
+
+}
+
+/*=========================
+         ICON
+=========================*/
+
+.step-icon{
+
+position:absolute;
+
+left:22px;
+
+top:28px;
+
+width:42px;
+
+height:42px;
+
+border-radius:50%;
+
+background:#fff;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:22px;
+
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.step:hover .step-icon{
+
+transform:scale(1.12);
+
+}
+
+/*=========================
+        TEXT
+=========================*/
+
+.step h3{
+
+font-size:24px;
+
+color:#222;
+
+margin-bottom:12px;
+
+}
+
+.step p{
+
+font-size:16px;
+
+line-height:1.8;
+
+color:#666;
+
+}
+
+/*=========================
+   LAST STEP REMOVE GAP
+=========================*/
+
+.step:last-child{
+
+margin-bottom:0;
+
+}
+
+/*=========================
+      RESPONSIVE
+=========================*/
+
+@media(max-width:992px){
+
+.journey-wrapper{
+
+flex-direction:column;
+
+}
+
+.journey-left{
+
+width:100%;
+
+}
+
+.timeline{
+
+padding-left:60px;
+
+}
+
+.timeline::before{
+
+left:28px;
+
+}
+
+.step{
+
+padding:25px 25px 25px 70px;
+
+}
+
+.step-number{
+
+left:-50px;
+
+}
+
+}
+/*====================================
+      RIGHT SIDE - APPLICATION FORM
+      PHASE 1
+====================================*/
+
+.journey-right{
+
+width:45%;
+
+position:sticky;
+
+top:120px;
+
+}
+
+/*=========================
+    APPLICATION CARD
+=========================*/
+
+.application-card{
+
+background:#ffffff;
+
+padding:40px;
+
+border-radius:22px;
+
+border:3px solid transparent;
+
+background-image:
+linear-gradient(#ffffff,#ffffff),
+linear-gradient(90deg,#d32f2f,#f4b400);
+
+background-origin:border-box;
+
+background-clip:padding-box,border-box;
+
+box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+transition:.35s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* Decorative glow */
+
+.application-card::before{
+
+content:"";
+
+position:absolute;
+
+width:180px;
+
+height:180px;
+
+background:rgba(244,180,0,.08);
+
+border-radius:50%;
+
+top:-80px;
+
+right:-80px;
+
+}
+
+.application-card::after{
+
+content:"";
+
+position:absolute;
+
+width:140px;
+
+height:140px;
+
+background:rgba(211,47,47,.05);
+
+border-radius:50%;
+
+bottom:-60px;
+
+left:-60px;
+
+}
+
+/* Hover */
+
+.application-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 28px 55px rgba(0,0,0,.12);
+
+}
+
+/*=========================
+      HEADING
+=========================*/
+
+.application-card h2{
+
+font-size:34px;
+
+color:#222;
+
+margin-bottom:15px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.application-card p{
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#666;
+
+margin-bottom:35px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+/*=========================
+       FORM
+=========================*/
+
+.application-card form{
+
+position:relative;
+
+z-index:2;
+
+}
+
+/* Two Column Layout */
+
+.form-row{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:18px;
+
+margin-bottom:20px;
+
+}
+
+/* Full Width Row */
+
+.form-row.full{
+
+grid-template-columns:1fr;
+
+}
+
+/*=========================
+    SECTION LABEL
+=========================*/
+
+.application-card h2::after{
+
+content:"";
+
+display:block;
+
+width:80px;
+
+height:4px;
+
+margin-top:14px;
+
+border-radius:10px;
+
+background:linear-gradient(
+90deg,
+#d32f2f,
+#f4b400
+);
+
+}
+
+/*=========================
+   SMALL TOP BADGE
+=========================*/
+
+.application-card::marker{
+
+display:none;
+
+}
+
+/* Premium Badge */
+
+.application-card .form-title{
+
+display:inline-block;
+
+padding:8px 18px;
+
+background:#d32f2f;
+
+color:#fff;
+
+font-size:13px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+border-radius:40px;
+
+margin-bottom:18px;
+
+}
+
+/*=========================
+   OPTIONAL FORM TITLE
+=========================*/
+
+/* If you want a badge,
+add this above h2:
+
+<span class="form-title">
+
+APPLICATION FORM
+
+</span>
+
+*/
+
+/*=========================
+      RESPONSIVE
+=========================*/
+
+@media(max-width:992px){
+
+.journey-right{
+
+width:100%;
+
+position:relative;
+
+top:0;
+
+margin-top:50px;
+
+}
+
+.application-card{
+
+padding:30px;
+
+}
+
+.form-row{
+
+grid-template-columns:1fr;
+
+}
+
+.application-card h2{
+
+font-size:30px;
+
+}
+
+}
+/*====================================
+    RIGHT SIDE - PHASE 2
+    INPUTS • BUTTON • PRIVACY
+====================================*/
+
+/*========== INPUTS ==========*/
+
+.application-card input,
+.application-card select,
+.application-card textarea{
+
+width:100%;
+
+padding:17px 20px;
+
+font-size:16px;
+
+font-family:inherit;
+
+color:#333;
+
+background:#fafafa;
+
+border:2px solid #e5e5e5;
+
+border-radius:12px;
+
+outline:none;
+
+transition:.35s;
+
+box-sizing:border-box;
+
+}
+
+.application-card input::placeholder{
+
+color:#888;
+
+}
+
+/*========== FOCUS EFFECT ==========*/
+
+.application-card input:focus,
+.application-card select:focus,
+.application-card textarea:focus{
+
+background:#fff;
+
+border-color:#d32f2f;
+
+box-shadow:0 0 0 4px rgba(211,47,47,.08);
+
+transform:translateY(-2px);
+
+}
+
+/*========== HOVER ==========*/
+
+.application-card input:hover,
+.application-card select:hover{
+
+border-color:#f4b400;
+
+}
+
+/*========== SUBMIT BUTTON ==========*/
+
+.application-card button{
+
+width:100%;
+
+height:62px;
+
+margin-top:15px;
+
+border:none;
+
+border-radius:14px;
+
+background:linear-gradient(
+90deg,
+#d32f2f,
+#b71c1c
+);
+
+color:#fff;
+
+font-size:20px;
+
+font-weight:700;
+
+letter-spacing:.5px;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:0 12px 28px rgba(211,47,47,.25);
+
+}
+
+.application-card button:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 18px 35px rgba(211,47,47,.35);
+
+background:linear-gradient(
+90deg,
+#b71c1c,
+#d32f2f
+);
+
+}
+
+.application-card button:active{
+
+transform:scale(.98);
+
+}
+
+/*========== PRIVACY NOTE ==========*/
+
+.privacy-note{
+
+margin-top:22px;
+
+padding:18px;
+
+background:#fff8dc;
+
+border-left:5px solid #d32f2f;
+
+border-right:5px solid #f4b400;
+
+border-radius:12px;
+
+font-size:15px;
+
+line-height:1.7;
+
+color:#555;
+
+text-align:center;
+
+}
+
+/*========== OPTIONAL SMALL TEXT ==========*/
+
+.application-card small{
+
+display:block;
+
+margin-top:8px;
+
+color:#888;
+
+font-size:13px;
+
+}
+
+/*========== LABELS (IF ADDED LATER) ==========*/
+
+.application-card label{
+
+display:block;
+
+margin-bottom:8px;
+
+font-size:15px;
+
+font-weight:600;
+
+color:#333;
+
+}
+
+/*========== SUCCESS MESSAGE ==========*/
+
+.success-message{
+
+display:none;
+
+margin-top:20px;
+
+padding:18px;
+
+background:#e8f8ee;
+
+border-left:5px solid #28a745;
+
+border-radius:12px;
+
+color:#1e7e34;
+
+font-weight:600;
+
+text-align:center;
+
+}
+
+/*========== ERROR MESSAGE ==========*/
+
+.error-message{
+
+display:none;
+
+margin-top:20px;
+
+padding:18px;
+
+background:#fdeaea;
+
+border-left:5px solid #d32f2f;
+
+border-radius:12px;
+
+color:#b71c1c;
+
+font-weight:600;
+
+text-align:center;
+
+}
+
+/*========== MOBILE ==========*/
+
+@media(max-width:992px){
+
+.application-card{
+
+padding:28px;
+
+}
+
+.application-card button{
+
+height:58px;
+
+font-size:18px;
+
+}
+
+.privacy-note{
+
+font-size:14px;
+
+}
+
+}
 </style>
 </head>
 
@@ -2464,12 +3315,271 @@ Complete training, practical guidance, and continuous mentorship will be provide
 </div>
 
 </section>     
-<!-- ================= APPLY ================= -->
+<!--====================================
+     JOURNEY + APPLICATION SECTION
+=====================================-->
 
-<section id="apply">
-  <h2 class="section-title">Apply Now</h2>
-  <p class="placeholder">Form coming next...</p>
+<section id="apply" class="journey">
+
+<div class="journey-container">
+
+<!--==========================
+        HEADING
+===========================-->
+
+<div class="journey-heading">
+
+<span class="section-tag">
+
+YOUR JOURNEY STARTS HERE
+
+</span>
+
+<h2>
+
+Become an Insurance Advisor in Just 6 Simple Steps
+
+</h2>
+
+<p>
+
+Follow these guided steps to begin your career with Aditya Birla Sun Life Insurance.
+
+</p>
+
+</div>
+
+<!--==========================
+      MAIN LAYOUT
+===========================-->
+
+<div class="journey-wrapper">
+
+<!--==========================
+        LEFT SIDE
+===========================-->
+
+<div class="journey-left">
+
+<div class="timeline">
+
+    <!-- STEP 1 -->
+
+    <div class="step">
+
+        <div class="step-number">1</div>
+
+        <div class="step-icon">📝</div>
+
+        <h3>Apply Online</h3>
+
+        <p>
+            Fill out the online application form with your basic details.
+        </p>
+
+    </div>
+
+    <!-- STEP 2 -->
+
+    <div class="step">
+
+        <div class="step-number">2</div>
+
+        <div class="step-icon">🤝</div>
+
+        <h3>Meet Your Mentor</h3>
+
+        <p>
+            Discuss the opportunity, career path and next steps with your Agency Partner.
+        </p>
+
+    </div>
+
+    <!-- STEP 3 -->
+
+    <div class="step">
+
+        <div class="step-number">3</div>
+
+        <div class="step-icon">📋</div>
+
+        <h3>Complete Registration</h3>
+
+        <p>
+            Submit the required documents and complete your advisor registration process.
+        </p>
+
+    </div>
+
+    <!-- STEP 4 -->
+
+    <div class="step">
+
+        <div class="step-number">4</div>
+
+        <div class="step-icon">🎓</div>
+
+        <h3>Complete Online Training</h3>
+
+        <p>
+            Attend professional online training sessions designed to help you successfully clear the <strong>IRDAI Certification Exam</strong>. The first <strong>8 days</strong> focus on exam preparation, followed by advanced training on insurance products, communication skills, sales techniques and confidence building.<br><br>
+
+            <strong>All training sessions are conducted online. No office visit is required.</strong>
+
+        </p>
+
+    </div>
+
+    <!-- STEP 5 -->
+
+    <div class="step">
+
+        <div class="step-number">5</div>
+
+        <div class="step-icon">📜</div>
+
+        <h3>Pass IRDAI Certification Exam</h3>
+
+        <p>
+            Successfully clear the IRDAI Certification Examination to become a licensed Insurance Advisor.
+        </p>
+
+    </div>
+
+    <!-- STEP 6 -->
+
+    <div class="step">
+
+        <div class="step-number">6</div>
+
+        <div class="step-icon">📄</div>
+
+        <h3>Complete Advisor Documentation</h3>
+
+        <p>
+            Complete all remaining advisor documentation and onboarding formalities after clearing the examination.
+        </p>
+
+    </div>
+
+    <!-- STEP 7 -->
+
+    <div class="step">
+
+        <div class="step-number">7</div>
+
+        <div class="step-icon">💼</div>
+
+        <h3>Advisor Code Activation</h3>
+
+        <p>
+            Receive your advisor code and activate your business profile to begin working as an Insurance Advisor.
+        </p>
+
+    </div>
+
+    <!-- STEP 8 -->
+
+    <div class="step">
+
+        <div class="step-number">8</div>
+
+        <div class="step-icon">🚀</div>
+
+        <h3>Start Your Career</h3>
+
+        <p>
+            Begin your rewarding career with continuous mentorship, professional support and unlimited growth opportunities.
+        </p>
+
+    </div>
+
+</div>
+
+<!--==========================
+       RIGHT SIDE
+===========================-->
+
+<div class="journey-right">
+
+<div class="application-card">
+
+<h2>
+
+Ready to Begin Your Journey?
+
+</h2>
+
+<p>
+
+Fill in your details and our Agency Partner will contact you shortly.
+
+</p>
+
+<form>
+
+<div class="form-row">
+
+<input type="text"
+placeholder="Full Name"
+required>
+
+<input type="number"
+placeholder="Age"
+required>
+
+</div>
+
+<div class="form-row">
+
+<input type="tel"
+placeholder="WhatsApp Number"
+required>
+
+<input type="email"
+placeholder="Email Address">
+
+</div>
+
+<div class="form-row">
+
+<input type="text"
+placeholder="Qualification"
+required>
+
+<input type="text"
+placeholder="Current Profession">
+
+</div>
+
+<div class="form-row full">
+
+<input type="text"
+placeholder="City, District & State"
+required>
+
+</div>
+
+<button type="submit">
+
+Submit Application
+
+</button>
+
+</form>
+
+<div class="privacy-note">
+
+🔒 Your information is kept confidential and will only be used for recruitment purposes.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
-
-</body>
-</html>
