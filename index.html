@@ -294,15 +294,18 @@ padding:80px 5%;
 /* CONTAINER */
 .opportunity-container{
 display:flex;
-align-items:flex-start;   /* TOP ALIGN FIX */
 justify-content:space-between;
-gap:20px;
+align-items:flex-start;
+gap:8px;
 }
 
 /* LEFT */
 .opportunity-left{
-width:50%;
-padding-right:10px;
+width:55%;
+}
+
+.opportunity-right{
+width:45%;
 }
 
 .opportunity-left h2{
@@ -354,14 +357,16 @@ max-width:420px;
 
 /* RIGHT */
 .opportunity-right{
-width:50%;
+width:48%;
 display:flex;
-justify-content:flex-end;
+justify-content:center;
+align-items:flex-start;   /* Align image with heading */
 }
 
 .opportunity-right img{
-width:90%;
-max-width:380px;
+width:100%;
+max-width:430px;          /* Slightly larger */
+height:auto;
 border-radius:10px;
 box-shadow:0 8px 25px rgba(0,0,0,0.05);
 }
