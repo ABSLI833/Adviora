@@ -285,102 +285,189 @@ margin:5px 0 0;
 font-size:13px;
 color:#666;
 }
-/* ================= OPPORTUNITY ================= */
+/*==========================
+      OPPORTUNITY
+===========================*/
 
 .opportunity{
-padding:80px 5%;
+
+padding:90px 6%;
+
 }
 
-/* CONTAINER */
 .opportunity-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;      /* <-- Center the image with the whole text block */
-    gap:40px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:45px;
+
 }
 
 /* LEFT */
+
 .opportunity-left{
-    flex:0 0 56%;
+
+flex:0 0 56%;
+
 }
 
-.opportunity-right{
-    flex:0 0 44%;
-    display:flex;
-    justify-content:center;
+.section-tag{
+
+display:inline-block;
+
+background:#ffecec;
+
+color:#d32f2f;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+font-size:13px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+margin-bottom:20px;
+
 }
 
 .opportunity-left h2{
-    font-size:42px;
-    line-height:1.15;
-    margin-bottom:18px;
-    color:#111;
+
+font-size:46px;
+
+line-height:1.15;
+
+margin:0 0 20px;
+
+color:#111;
+
 }
 
 .opportunity-sub{
-    font-size:18px;
-    line-height:1.7;
-    color:#555;
-    margin-bottom:28px;
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#555;
+
+margin-bottom:28px;
+
+max-width:620px;
+
 }
 
-/* POINTS */
 .opportunity-points{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px 35px;
-    margin-bottom:30px;
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px 30px;
+
+margin-bottom:30px;
+
 }
 
 .opportunity-points div{
-    font-size:17px;
-    font-weight:500;
+
+font-size:17px;
+
+font-weight:500;
+
+color:#222;
+
 }
 
-.opportunity-points div{
-font-size:15px;
-color:#333;
-}
+/* Highlight Cards */
 
-/* HIGHLIGHT BOXES */
 .opportunity-highlights{
+
 display:flex;
+
 flex-direction:column;
-gap:12px;
+
+gap:16px;
+
+max-width:560px;
+
 }
 
 .highlight-box{
-    background:#ffffff;
-    border-left:5px solid #d32f2f;
-    border-radius:10px;
-    padding:16px 18px;
-    margin-bottom:14px;
-    box-shadow:0 5px 18px rgba(0,0,0,.05);
-    transition:.3s;
+
+background:#fff;
+
+padding:18px 22px;
+
+border-radius:12px;
+
+border-left:5px solid #d32f2f;
+
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+font-size:15px;
+
+line-height:1.6;
+
+transition:.35s;
+
 }
 
 .highlight-box:hover{
-    transform:translateX(8px);
-    box-shadow:0 10px 24px rgba(0,0,0,.08);
+
+transform:translateX(10px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
 }
 
 /* RIGHT */
+
 .opportunity-right{
-width:52%;
+
+flex:0 0 44%;
+
 display:flex;
+
 justify-content:center;
-align-items:flex-start;   /* Align image with heading */
+
 }
 
-.opportunity-right img{
-    width:100%;
-    max-width:450px;
-    border-radius:12px;
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-    transition:.4s ease;
+/* Floating Card */
+
+.image-card{
+
+background:#fff;
+
+padding:18px;
+
+border-radius:18px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+transition:.4s;
+
 }
-.opportunity-right img:hover{
-    transform:translateY(-8px);
+
+.image-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.image-card img{
+
+display:block;
+
+width:100%;
+
+max-width:390px;
+
+border-radius:12px;
+
 }
 </style>
 </head>
@@ -477,53 +564,64 @@ align-items:flex-start;   /* Align image with heading */
 
 <section id="opportunity" class="opportunity">
 
-  <div class="opportunity-container">
+    <div class="opportunity-container">
 
-    <!-- LEFT SIDE -->
-    <div class="opportunity-left">
+        <!-- LEFT -->
+        <div class="opportunity-left">
 
-      <h2>A Career Opportunity Like No Other</h2>
+            <span class="section-tag">CAREER OPPORTUNITY</span>
 
-      <p class="opportunity-sub">
-        Build a career where you control your time, income, and growth. Start your journey with a trusted brand and unlock new possibilities.
-      </p>
+            <h2>A Career Opportunity<br>Like No Other</h2>
 
-      <!-- POINTS -->
-      <div class="opportunity-points">
-        <div>✔ Work on your own terms</div>
-        <div>✔ No investment required</div>
-        <div>✔ Flexible part-time / full-time</div>
-        <div>✔ Unlimited earning potential</div>
-      </div>
+            <p class="opportunity-sub">
+                Build a career where you control your time, income, and future. Partner with Aditya Birla Sun Life Insurance and enjoy the freedom to grow at your own pace while creating a meaningful impact.
+            </p>
 
-      <!-- HIGHLIGHT BOXES -->
-      <div class="opportunity-highlights">
+            <div class="opportunity-points">
 
-        <div class="highlight-box">
-          Start with zero investment and build your own income stream with expert support.
+                <div>✔ Work on your own terms</div>
+
+                <div>✔ No investment required</div>
+
+                <div>✔ Flexible part-time / full-time</div>
+
+                <div>✔ Unlimited earning potential</div>
+
+            </div>
+
+            <div class="opportunity-highlights">
+
+                <div class="highlight-box">
+                    🚀 Start with zero investment and begin building your own income stream.
+                </div>
+
+                <div class="highlight-box">
+                    🎯 Receive professional training, mentorship and complete business support.
+                </div>
+
+                <div class="highlight-box">
+                    💼 Create a flexible career that grows with your ambitions and lifestyle.
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="highlight-box">
-          Get complete training, mentorship, and guidance to grow step by step.
-        </div>
+        <!-- RIGHT -->
 
-        <div class="highlight-box">
-          Work at your own pace and create a flexible career that fits your lifestyle.
-        </div>
+        <div class="opportunity-right">
 
-      </div>
+            <div class="image-card">
+
+                <img src="career.png" alt="Career Growth">
+
+            </div>
+
+        </div>
 
     </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="opportunity-right">
-      <img src="career.png" alt="Career Growth">
-    </div>
-
-  </div>
 
 </section>
-
 <!-- ================= INCOME ================= -->
 
 <section id="income">
