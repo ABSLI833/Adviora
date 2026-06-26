@@ -701,231 +701,253 @@ box-shadow:0 15px 30px rgba(211,47,47,.35);
 
 .benefits{
 
-padding:90px 6%;
+    padding:90px 6%;
 
-background:#f8f9fb;
+    background:#f8f9fb;
 
 }
 
-/* Heading */
+/*=========================
+        HEADING
+==========================*/
 
 .benefits-heading{
 
-text-align:center;
+    text-align:center;
 
-max-width:760px;
+    max-width:760px;
 
-margin:auto;
+    margin:auto;
 
-margin-bottom:70px;
+    margin-bottom:70px;
 
 }
 
 .benefits-heading h2{
 
-font-size:42px;
+    font-size:42px;
 
-margin:18px 0;
+    margin:18px 0;
 
-color:#111;
+    color:#111;
 
 }
 
 .benefits-heading p{
 
-font-size:18px;
+    font-size:18px;
 
-line-height:1.7;
+    line-height:1.7;
 
-color:#666;
-
-}
-
-/* Timeline */
-
-.timeline{
-
-position:relative;
-
-max-width:1000px;
-
-margin:auto;
+    color:#666;
 
 }
 
-.timeline::before{
+/*=========================
+        TIMELINE
+==========================*/
 
-content:"";
+.benefits-timeline{
 
-position:absolute;
+    position:relative;
 
-left:50%;
+    max-width:1000px;
 
-top:0;
-
-width:4px;
-
-height:100%;
-
-background:#d32f2f;
-
-transform:translateX(-50%);
+    margin:auto;
 
 }
 
-/* Items */
+.benefits-timeline::before{
 
-.timeline-item{
+    content:"";
 
-position:relative;
+    position:absolute;
 
-width:50%;
+    left:50%;
 
-padding:20px 40px;
+    top:0;
 
-box-sizing:border-box;
+    width:4px;
 
-}
+    height:100%;
 
-.timeline-item.left{
+    background:#d32f2f;
 
-left:0;
-
-text-align:right;
+    transform:translateX(-50%);
 
 }
 
-.timeline-item.right{
+/*=========================
+        ITEMS
+==========================*/
 
-left:50%;
+.benefits-item{
 
-}
+    position:relative;
 
-/* Content */
+    width:50%;
 
-.timeline-content{
+    padding:20px 40px;
 
-background:#ffffff;
-
-padding:30px;
-
-border-radius:18px;
-
-/* Gradient Border */
-border:3px solid transparent;
-background-image:
-linear-gradient(#ffffff,#ffffff),
-linear-gradient(90deg,#d32f2f,#f4b400);
-
-background-origin:border-box;
-background-clip:padding-box,border-box;
-
-box-shadow:0 12px 30px rgba(0,0,0,.06);
-
-transition:.35s;
-
-display:flex;
-flex-direction:column;
-align-items:center;
-text-align:center;
+    box-sizing:border-box;
 
 }
 
-.timeline-content:hover{
+.benefits-item.left{
 
-transform:translateY(-8px);
+    left:0;
 
-box-shadow:0 18px 35px rgba(0,0,0,.10);
-
-}
-
-/* Icon */
-
-.timeline-icon{
-
-width:80px;
-height:80px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-background:#fff8dc;
-
-border-radius:50%;
-
-font-size:38px;
-
-margin:0 auto 22px;
-
-box-shadow:0 8px 20px rgba(0,0,0,.08);
+    text-align:right;
 
 }
 
-/* Headings */
+.benefits-item.right{
 
-.timeline-content h3{
-
-margin:0 0 15px;
-
-font-size:28px;
-
-font-weight:700;
-
-color:#222;
-
-text-align:center;
+    left:50%;
 
 }
 
-.timeline-content p{
+/*=========================
+        CARD
+==========================*/
 
-margin:0;
+.benefits-card{
 
-font-size:16px;
+    background:#ffffff;
 
-line-height:1.8;
+    padding:30px;
 
-color:#666;
+    border-radius:18px;
 
-text-align:center;
+    border:3px solid transparent;
 
-}
-/* Timeline Dots */
+    background-image:
 
-.timeline-item::after{
+    linear-gradient(#ffffff,#ffffff),
 
-content:"";
+    linear-gradient(90deg,#d32f2f,#f4b400);
 
-position:absolute;
+    background-origin:border-box;
 
-top:50%;
-transform:translateY(-50%);
+    background-clip:padding-box,border-box;
 
-width:18px;
-height:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
 
-background:#d32f2f;
+    transition:.35s;
 
-border:4px solid #fff;
+    display:flex;
 
-border-radius:50%;
+    flex-direction:column;
 
-box-shadow:0 0 12px rgba(211,47,47,.35);
+    align-items:center;
 
-z-index:10;
-
-}
-
-.timeline-item.left::after{
-
-right:-9px;
+    text-align:center;
 
 }
 
-.timeline-item.right::after{
+.benefits-card:hover{
 
-left:-9px;
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.10);
+
+}
+
+/*=========================
+        ICON
+==========================*/
+
+.benefits-icon{
+
+    width:80px;
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#fff8dc;
+
+    border-radius:50%;
+
+    font-size:38px;
+
+    margin:0 auto 22px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/*=========================
+        TEXT
+==========================*/
+
+.benefits-card h3{
+
+    margin:0 0 15px;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#222;
+
+}
+
+.benefits-card p{
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+/*=========================
+      TIMELINE DOTS
+==========================*/
+
+.benefits-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:18px;
+
+    height:18px;
+
+    background:#d32f2f;
+
+    border:4px solid #ffffff;
+
+    border-radius:50%;
+
+    box-shadow:0 0 12px rgba(211,47,47,.35);
+
+    z-index:10;
+
+}
+
+.benefits-item.left::after{
+
+    right:-9px;
+
+}
+
+.benefits-item.right::after{
+
+    left:-9px;
 
 }
 /*====================================
