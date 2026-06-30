@@ -441,6 +441,559 @@ transform:scale(1.05);
     color:#0B2C66;
 
 }
+ /*====================================================
+            ABOUT ADVIORA RESPONSIVE
+====================================================*/
+
+@media (max-width:1200px){
+
+    .adviora-top{
+
+        gap:50px;
+
+    }
+
+    .adviora-left h2{
+
+        font-size:42px;
+
+    }
+
+    .adviora-logo-card{
+
+        width:360px;
+
+    }
+
+    .adviora-logo-card img{
+
+        width:250px;
+
+    }
+
+}
+
+
+/*==========================
+        TABLET
+===========================*/
+
+@media (max-width:992px){
+
+    .adviora-about{
+
+        padding:80px 6%;
+
+    }
+
+    .adviora-top{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+    }
+
+    .adviora-divider{
+
+        margin:25px auto;
+
+    }
+
+    .adviora-left{
+
+        width:100%;
+
+    }
+
+    .adviora-right{
+
+        width:100%;
+
+    }
+
+    .adviora-logo-card{
+
+        width:400px;
+
+        max-width:100%;
+
+    }
+
+    .adviora-bottom{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+}
+
+
+/*==========================
+        MOBILE
+===========================*/
+
+@media (max-width:768px){
+
+    .adviora-about{
+
+        padding:70px 20px;
+
+    }
+
+    .adviora-left h2{
+
+        font-size:34px;
+
+        line-height:1.25;
+
+    }
+
+    .adviora-left p{
+
+        font-size:17px;
+
+        line-height:1.8;
+
+    }
+
+    .adviora-feature-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .adviora-feature-card{
+
+        padding:18px;
+
+    }
+
+    .feature-icon{
+
+        width:52px;
+
+        height:52px;
+
+        font-size:22px;
+
+    }
+
+    .feature-text h4{
+
+        font-size:19px;
+
+    }
+
+    .feature-text p{
+
+        font-size:15px;
+
+    }
+
+    .adviora-logo-card{
+
+        padding:30px 20px;
+
+    }
+
+    .adviora-logo-card img{
+
+        width:220px;
+
+    }
+
+    .adviora-logo-card h3{
+
+        font-size:24px;
+
+    }
+
+    .adviora-logo-card p{
+
+        font-size:15px;
+
+    }
+
+    .adviora-support{
+
+        padding:25px;
+
+    }
+
+    .support-header{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:10px;
+
+    }
+
+    .support-header h3{
+
+        font-size:24px;
+
+    }
+
+    .adviora-support p{
+
+        font-size:16px;
+
+        text-align:center;
+
+    }
+
+    .support-button{
+
+        text-align:center;
+
+    }
+
+    .support-button a{
+
+        width:100%;
+
+        padding:16px;
+
+    }
+
+}
+
+
+/*==========================
+      SMALL MOBILE
+===========================*/
+
+@media (max-width:480px){
+
+    .adviora-left h2{
+
+        font-size:28px;
+
+    }
+
+    .adviora-tag{
+
+        font-size:13px;
+
+    }
+
+    .adviora-logo-card img{
+
+        width:190px;
+
+    }
+
+    .feature-text h4{
+
+        font-size:17px;
+
+    }
+
+    .feature-text p{
+
+        font-size:14px;
+
+    }
+
+}
+ /*====================================================
+            PREMIUM EFFECTS
+====================================================*/
+
+/* Smooth Scrolling */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+/*==========================
+      LOGO CARD
+===========================*/
+
+.adviora-logo-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.45s ease;
+
+    animation:logoFloat 6s ease-in-out infinite;
+
+}
+
+.adviora-logo-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+
+    left:-120px;
+
+    width:240px;
+
+    height:240px;
+
+    border-radius:50%;
+
+    background:rgba(244,180,0,.08);
+
+}
+
+.adviora-logo-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-100px;
+
+    bottom:-100px;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(214,45,45,.06);
+
+}
+
+.adviora-logo-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 30px 70px rgba(11,44,102,.18);
+
+}
+
+.adviora-logo-card img{
+
+    position:relative;
+
+    z-index:2;
+
+    transition:.4s;
+
+}
+
+.adviora-logo-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+/*==========================
+      FEATURE CARDS
+===========================*/
+
+.adviora-feature-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.adviora-feature-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:100%;
+
+    background:linear-gradient(90deg,
+    rgba(244,180,0,.10),
+    rgba(214,45,45,.05));
+
+    transition:.45s;
+
+}
+
+.adviora-feature-card:hover::before{
+
+    width:100%;
+
+}
+
+.adviora-feature-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 22px 45px rgba(11,44,102,.12);
+
+}
+
+.feature-icon{
+
+    transition:.35s;
+
+}
+
+.adviora-feature-card:hover .feature-icon{
+
+    transform:rotate(8deg) scale(1.08);
+
+}
+
+
+/*==========================
+      BUTTON
+===========================*/
+
+.support-button a{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.support-button a::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:120%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.20);
+
+    transform:skewX(-25deg);
+
+    transition:.6s;
+
+}
+
+.support-button a:hover::before{
+
+    left:120%;
+
+}
+
+
+/*==========================
+      SUPPORT CARD
+===========================*/
+
+.adviora-support{
+
+    transition:.4s;
+
+}
+
+.adviora-support:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 45px rgba(214,45,45,.10);
+
+}
+
+
+/*==========================
+      SECTION
+===========================*/
+
+.adviora-about{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.adviora-about::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+    background:rgba(244,180,0,.05);
+
+    top:-120px;
+
+    right:-120px;
+
+}
+
+.adviora-about::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    background:rgba(214,45,45,.03);
+
+    bottom:-120px;
+
+    left:-120px;
+
+}
+
+
+/*==========================
+      ANIMATION
+===========================*/
+
+@keyframes logoFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
 /* ================= HERO ================= */
 
 .hero{
