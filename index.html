@@ -4223,6 +4223,223 @@ html{
     }
 
 }
+ /*====================================================
+            ADVIORA OFFICIAL CTA
+====================================================*/
+
+.adviora-cta{
+
+    position:relative;
+
+    padding:110px 20px;
+
+    background:linear-gradient(135deg,#08214b,#0b2c66);
+
+    overflow:hidden;
+
+}
+
+.adviora-cta::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    background:rgba(244,180,0,.08);
+
+    border-radius:50%;
+
+    top:-180px;
+
+    left:-120px;
+
+}
+
+.adviora-cta::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    background:rgba(214,45,45,.06);
+
+    border-radius:50%;
+
+    bottom:-150px;
+
+    right:-100px;
+
+}
+
+.adviora-cta-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(255,255,255,.04),
+    transparent 45%);
+
+}
+
+.adviora-cta-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.adviora-cta-tag{
+
+    display:inline-block;
+
+    color:#f4b400;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+}
+
+.adviora-cta h2{
+
+    color:#ffffff;
+
+    font-size:56px;
+
+    line-height:1.2;
+
+    margin-bottom:30px;
+
+}
+
+.adviora-cta p{
+
+    color:rgba(255,255,255,.85);
+
+    font-size:21px;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+}
+
+.adviora-cta-points{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:45px;
+
+}
+
+.adviora-cta-points span{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    padding:12px 22px;
+
+    border-radius:40px;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.adviora-cta-btn{
+
+    display:inline-block;
+
+    background:#f4b400;
+
+    color:#0B2C66;
+
+    padding:20px 42px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.adviora-cta-btn:hover{
+
+    background:#ffffff;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.20);
+
+}
+ @media(max-width:768px){
+
+    .adviora-cta{
+
+        padding:80px 20px;
+
+    }
+
+    .adviora-cta h2{
+
+        font-size:38px;
+
+    }
+
+    .adviora-cta p{
+
+        font-size:17px;
+
+    }
+
+    .adviora-cta-btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+
+}
     /*=========================================
         PREMIUM FOOTER - PHASE 2
 ==========================================*/
@@ -5304,223 +5521,7 @@ html{
     line-height:1.8;
 
 }
- /*====================================================
-            ADVIORA OFFICIAL CTA
-====================================================*/
-
-.adviora-cta{
-
-    position:relative;
-
-    padding:110px 20px;
-
-    background:linear-gradient(135deg,#08214b,#0b2c66);
-
-    overflow:hidden;
-
-}
-
-.adviora-cta::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:420px;
-
-    height:420px;
-
-    background:rgba(244,180,0,.08);
-
-    border-radius:50%;
-
-    top:-180px;
-
-    left:-120px;
-
-}
-
-.adviora-cta::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:350px;
-
-    height:350px;
-
-    background:rgba(214,45,45,.06);
-
-    border-radius:50%;
-
-    bottom:-150px;
-
-    right:-100px;
-
-}
-
-.adviora-cta-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-    radial-gradient(circle at top right,
-    rgba(255,255,255,.04),
-    transparent 45%);
-
-}
-
-.adviora-cta-content{
-
-    position:relative;
-
-    z-index:2;
-
-    max-width:900px;
-
-    margin:auto;
-
-    text-align:center;
-
-}
-
-.adviora-cta-tag{
-
-    display:inline-block;
-
-    color:#f4b400;
-
-    font-size:15px;
-
-    font-weight:700;
-
-    letter-spacing:3px;
-
-    margin-bottom:25px;
-
-}
-
-.adviora-cta h2{
-
-    color:#ffffff;
-
-    font-size:56px;
-
-    line-height:1.2;
-
-    margin-bottom:30px;
-
-}
-
-.adviora-cta p{
-
-    color:rgba(255,255,255,.85);
-
-    font-size:21px;
-
-    line-height:1.9;
-
-    margin-bottom:40px;
-
-}
-
-.adviora-cta-points{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:18px;
-
-    flex-wrap:wrap;
-
-    margin-bottom:45px;
-
-}
-
-.adviora-cta-points span{
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    padding:12px 22px;
-
-    border-radius:40px;
-
-    color:#ffffff;
-
-    font-weight:600;
-
-    backdrop-filter:blur(10px);
-
-}
-
-.adviora-cta-btn{
-
-    display:inline-block;
-
-    background:#f4b400;
-
-    color:#0B2C66;
-
-    padding:20px 42px;
-
-    border-radius:10px;
-
-    text-decoration:none;
-
-    font-size:19px;
-
-    font-weight:700;
-
-    transition:.35s;
-
-}
-
-.adviora-cta-btn:hover{
-
-    background:#ffffff;
-
-    transform:translateY(-4px);
-
-    box-shadow:0 20px 40px rgba(0,0,0,.20);
-
-}
- @media(max-width:768px){
-
-    .adviora-cta{
-
-        padding:80px 20px;
-
-    }
-
-    .adviora-cta h2{
-
-        font-size:38px;
-
-    }
-
-    .adviora-cta p{
-
-        font-size:17px;
-
-    }
-
-    .adviora-cta-btn{
-
-        width:100%;
-
-        text-align:center;
-
-    }
-
-}
-
-}
+ 
 </style>
 
 <link rel="stylesheet"
