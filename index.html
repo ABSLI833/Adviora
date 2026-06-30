@@ -112,14 +112,13 @@ transform:scale(1.05);
     object-fit:cover;
 
 } 
- /*=====================================
-        ABOUT ADVIORA
-=====================================*/
+ /*====================================================
+                ABOUT ADVIORA
+====================================================*/
 
 .adviora-about{
 
     padding:100px 8%;
-
     background:#ffffff;
 
 }
@@ -127,132 +126,293 @@ transform:scale(1.05);
 .adviora-container{
 
     max-width:1400px;
-
     margin:auto;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:70px;
 
 }
 
-.adviora-content{
+/*==========================
+        TOP AREA
+===========================*/
 
-    flex:1.6;
+.adviora-top{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:80px;
+    margin-bottom:80px;
+
+}
+
+.adviora-left{
+
+    flex:1.4;
 
 }
 
 .adviora-tag{
 
+    display:inline-block;
     color:#d62d2d;
-
     font-size:15px;
-
     font-weight:700;
-
     letter-spacing:2px;
+    margin-bottom:18px;
 
 }
 
-.adviora-content h2{
+.adviora-left h2{
 
-    font-size:58px;
-
+    font-size:48px;
+    line-height:1.15;
     color:#0B2C66;
-
-    line-height:1.2;
-
-    margin:18px 0;
+    margin-bottom:25px;
+    font-weight:800;
 
 }
 
-.adviora-line{
+.adviora-divider{
 
     width:90px;
-
     height:4px;
-
     background:#f4b400;
-
     border-radius:50px;
-
-    margin-bottom:35px;
+    margin-bottom:30px;
 
 }
 
-.adviora-content p{
+.adviora-left p{
 
     font-size:20px;
-
     line-height:1.9;
-
     color:#555;
-
-    margin-bottom:35px;
+    margin-bottom:25px;
 
 }
 
-.adviora-features{
+/*==========================
+        LOGO CARD
+===========================*/
+
+.adviora-right{
+
+    flex:1;
+    display:flex;
+    justify-content:center;
+
+}
+
+.adviora-logo-card{
+
+    width:430px;
+
+    background:linear-gradient(145deg,#ffffff,#f5f9ff);
+
+    border-radius:28px;
+
+    padding:45px 35px;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(11,44,102,.10);
+
+    border:1px solid #eef2f7;
+
+}
+
+.adviora-logo-card img{
+
+    width:300px;
+    display:block;
+    margin:auto auto 25px;
+
+}
+
+.adviora-logo-card h3{
+
+    color:#0B2C66;
+    font-size:30px;
+    line-height:1.3;
+    margin-bottom:12px;
+
+}
+
+.adviora-logo-card p{
+
+    color:#777;
+    font-size:17px;
+
+}
+
+/*==========================
+      BOTTOM AREA
+===========================*/
+
+.adviora-bottom{
+
+    display:grid;
+
+    grid-template-columns:1.2fr .9fr;
+
+    gap:60px;
+
+}
+
+/*==========================
+      FEATURE GRID
+===========================*/
+
+.adviora-feature-grid{
 
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:18px;
-
-    margin-bottom:40px;
+    gap:28px;
 
 }
 
-.feature-item{
+/*==========================
+      FEATURE CARD
+===========================*/
 
-    font-size:19px;
+.adviora-feature-card{
 
-    font-weight:600;
+    background:#fff9eb;
 
-    color:#0B2C66;
+    border-left:6px solid #d62d2d;
 
-}
-
-.adviora-support{
-
-    background:#fff8f3;
-
-    border:1px solid #f0d3a5;
+    border-right:6px solid #f4b400;
 
     border-radius:18px;
 
-    padding:30px;
+    padding:22px 24px;
 
-    margin-bottom:40px;
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
 
 }
 
-.adviora-support h4{
+.adviora-feature-card:hover{
 
-    color:#d62d2d;
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+.feature-icon{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+    flex-shrink:0;
+
+}
+
+.feature-text h4{
+
+    color:#0B2C66;
+
+    font-size:21px;
+
+    margin-bottom:6px;
+
+}
+
+.feature-text p{
+
+    color:#666;
+
+    font-size:16px;
+
+    margin:0;
+
+}
+
+/*==========================
+     SUPPORT CARD
+===========================*/
+
+.adviora-support{
+
+    background:#fff8ef;
+
+    border-left:6px solid #d62d2d;
+
+    border-right:6px solid #f4b400;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.support-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+.support-heart{
 
     font-size:28px;
 
-    margin-bottom:15px;
+}
+
+.support-header h3{
+
+    color:#d62d2d;
+
+    font-size:30px;
 
 }
 
 .adviora-support p{
 
-    margin:0;
+    color:#555;
 
     font-size:18px;
 
-    line-height:1.8;
+    line-height:1.9;
+
+    margin-bottom:35px;
 
 }
 
-.adviora-btn{
+/*==========================
+      BUTTON
+===========================*/
+
+.support-button a{
 
     display:inline-block;
 
@@ -262,69 +422,23 @@ transform:scale(1.05);
 
     text-decoration:none;
 
-    padding:18px 42px;
+    padding:18px 36px;
 
-    border-radius:8px;
+    border-radius:10px;
 
     font-size:18px;
 
     font-weight:700;
 
-    transition:.3s;
+    transition:.35s;
 
 }
 
-.adviora-btn:hover{
+.support-button a:hover{
 
     background:#f4b400;
 
     color:#0B2C66;
-
-}
-
-.adviora-image{
-
-    flex:1;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-.adviora-logo-box{
-
-    width:500px;
-
-    height:500px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:linear-gradient(135deg,#ffffff,#eef5ff);
-
-    box-shadow:0 25px 70px rgba(0,0,0,.10);
-
-}
-
-.adviora-logo-box img{
-
-    width:390px;
-
-    transition:.4s;
-
-}
-
-.adviora-logo-box:hover img{
-
-    transform:scale(1.05);
 
 }
 /* ================= HERO ================= */
@@ -4697,87 +4811,200 @@ src="https://www.facebook.com/tr?id=938385985885863&ev=PageView&noscript=1"
 
 </section>
  <!--====================================
-        ABOUT ADVIORA
+            ABOUT ADVIORA
 =====================================-->
 
 <section class="adviora-about">
 
     <div class="adviora-container">
 
-        <!-- LEFT SIDE -->
+        <!--========================
+                TOP AREA
+        =========================-->
 
-        <div class="adviora-content">
+        <div class="adviora-top">
 
-            <span class="adviora-tag">
-                ABOUT ADVIORA
-            </span>
+            <!-- LEFT CONTENT -->
 
-            <h2>
-                Building Careers.
-                <br>
-                Creating Opportunities.
-            </h2>
+            <div class="adviora-left">
 
-            <div class="adviora-line"></div>
+                <span class="adviora-tag">
+                    ABOUT ADVIORA
+                </span>
 
-            <p>
+                <h2>
+                    Your Trusted Career
+                    <br>
+                    Growth Platform
+                </h2>
 
-                Adviora is a dedicated career platform created to help aspiring professionals build successful careers with Aditya Birla Sun Life Insurance.
-
-                From your first application to professional training, career guidance, and continuous support, Adviora is committed to helping you grow with confidence and achieve long-term success.
-
-            </p>
-
-            <div class="adviora-features">
-
-                <div class="feature-item">
-                    ✔ Professional Career Guidance
-                </div>
-
-                <div class="feature-item">
-                    ✔ Structured Learning & Development
-                </div>
-
-                <div class="feature-item">
-                    ✔ Long-Term Career Support
-                </div>
-
-                <div class="feature-item">
-                    ✔ Growth-Oriented Opportunities
-                </div>
-
-            </div>
-
-            <div class="adviora-support">
-
-                <h4>
-                    Dedicated Customer Support
-                </h4>
+                <div class="adviora-divider"></div>
 
                 <p>
 
-                    Beyond career opportunities, we have also created
-                    <strong>Adviora Official</strong> — a dedicated platform where our valued customers can receive policy assistance, service guidance, and continuous support throughout their insurance journey.
+                    Adviora is a dedicated career platform created to help aspiring professionals build successful careers with Aditya Birla Sun Life Insurance.
+
+                </p>
+
+                <p>
+
+                    From your first application to professional training, career guidance, and continuous support, Adviora is committed to helping you grow with confidence and achieve long-term success.
 
                 </p>
 
             </div>
 
-            <a href="adviora-official.html" class="adviora-btn">
+            <!-- RIGHT LOGO -->
 
-                Switch to Adviora Official →
+            <div class="adviora-right">
 
-            </a>
+                <div class="adviora-logo-card">
+
+                    <img src="adviora.png" alt="Adviora Logo">
+
+                    <h3>
+                        Build Your Career.
+                        <br>
+                        Shape Your Future.
+                    </h3>
+
+                    <p>
+                        Trusted Career Platform
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <!-- RIGHT SIDE -->
+        <!--========================
+              FEATURE SECTION
+        =========================-->
 
-        <div class="adviora-image">
+        <div class="adviora-bottom">
 
-            <div class="adviora-logo-box">
+            <!-- LEFT FEATURE CARDS -->
 
-                <img src="adviora.png" alt="Adviora">
+            <div class="adviora-feature-grid">
+
+                <div class="adviora-feature-card">
+
+                    <div class="feature-icon">
+                        👨‍💼
+                    </div>
+
+                    <div class="feature-text">
+
+                        <h4>
+                            Career Guidance
+                        </h4>
+
+                        <p>
+                            Expert Mentorship
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="adviora-feature-card">
+
+                    <div class="feature-icon">
+                        📚
+                    </div>
+
+                    <div class="feature-text">
+
+                        <h4>
+                            Professional Learning
+                        </h4>
+
+                        <p>
+                            Structured Training
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="adviora-feature-card">
+
+                    <div class="feature-icon">
+                        🤝
+                    </div>
+
+                    <div class="feature-text">
+
+                        <h4>
+                            Long-Term Career Support
+                        </h4>
+
+                        <p>
+                            Continuous Guidance
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="adviora-feature-card">
+
+                    <div class="feature-icon">
+                        📈
+                    </div>
+
+                    <div class="feature-text">
+
+                        <h4>
+                            Growth Opportunities
+                        </h4>
+
+                        <p>
+                            Build Your Future
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT CUSTOMER SUPPORT -->
+
+            <div class="adviora-support">
+
+                <div class="support-header">
+
+                    <span class="support-heart">
+                        ❤️
+                    </span>
+
+                    <h3>
+                        Dedicated Customer Support
+                    </h3>
+
+                </div>
+
+                <p>
+
+                    Beyond career opportunities, we have also created
+                    <strong>Adviora Official</strong> — a dedicated platform
+                    where our valued customers can receive policy assistance,
+                    service guidance, and continuous support throughout
+                    their insurance journey.
+
+                </p>
+
+                <div class="support-button">
+
+                    <a href="adviora-official.html">
+
+                        Explore Adviora Official →
+
+                    </a>
+
+                </div>
 
             </div>
 
