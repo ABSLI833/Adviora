@@ -307,6 +307,161 @@ font-weight:500;
     }
 
 }
+    /*====================================================
+            OFFICIAL WELCOME BANNER
+====================================================*/
+
+.official-banner{
+
+    width:100%;
+
+    height:700px;
+
+    background:url("aobanner.png") center center/cover no-repeat;
+
+    position:relative;
+
+}
+
+.official-banner-overlay{
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(5,22,55,.20);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.official-banner-content{
+
+    max-width:900px;
+
+    padding:20px;
+
+}
+
+.official-tag{
+
+    display:inline-block;
+
+    background:rgba(255,255,255,.92);
+
+    color:#d62d2d;
+
+    padding:12px 30px;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+
+}
+
+.official-banner-content h1{
+
+    font-size:78px;
+
+    color:#ffffff;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+    text-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+.official-banner-content p{
+
+    font-size:28px;
+
+    color:#ffffff;
+
+    margin-bottom:45px;
+
+    text-shadow:0 5px 15px rgba(0,0,0,.30);
+
+}
+
+.official-banner-btn{
+
+    display:inline-block;
+
+    padding:18px 42px;
+
+    background:#f4b400;
+
+    color:#0B2C66;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.official-banner-btn:hover{
+
+    background:#d62d2d;
+
+    color:#ffffff;
+
+    transform:translateY(-4px);
+
+}
+
+/*==========================
+        MOBILE
+===========================*/
+
+@media(max-width:768px){
+
+    .official-banner{
+
+        height:520px;
+
+    }
+
+    .official-banner-content h1{
+
+        font-size:44px;
+
+    }
+
+    .official-banner-content p{
+
+        font-size:20px;
+
+    }
+
+    .official-tag{
+
+        font-size:14px;
+
+        padding:10px 24px;
+
+    }
+
+}
   </style>
 
 </head>
@@ -370,3 +525,34 @@ font-weight:500;
     </nav>
 
 </header>
+<!--====================================
+        WELCOME BANNER
+=====================================-->
+
+<section id="home" class="official-banner">
+
+    <div class="official-banner-overlay">
+
+        <div class="official-banner-content">
+
+            <span class="official-tag">
+                WELCOME TO
+            </span>
+
+            <h1>
+                Adviora Official
+            </h1>
+
+            <p>
+                Your Trusted Insurance Support Partner
+            </p>
+
+            <a href="#support" class="official-banner-btn">
+                Get Support →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
