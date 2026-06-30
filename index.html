@@ -5520,7 +5520,95 @@ html{
     line-height:1.8;
 
 }
- 
+ /*====================================================
+        GLOBAL SECTION SPACING SYSTEM
+====================================================*/
+
+/* Remove unwanted gaps */
+.hero,
+.opportunity,
+.income,
+.benefits,
+.partner,
+.eligibility,
+.career-journey,
+.faq-section,
+.final-cta-section,
+.adviora-about,
+.adviora-cta,
+.premium-footer{
+
+    margin:0;
+}
+
+/* Uniform spacing */
+
+.adviora-about{
+    padding:90px 6%;
+}
+
+.hero{
+    margin:20px;
+}
+
+.opportunity,
+.income,
+.benefits,
+.partner,
+.eligibility,
+.career-journey,
+.faq-section,
+.final-cta-section,
+.adviora-cta{
+
+    padding:90px 6%;
+}
+
+/* Footer */
+
+.premium-footer{
+    padding:90px 6% 35px;
+}
+
+/* Remove double spacing */
+
+.hero + .opportunity,
+.opportunity + .income,
+.income + .benefits,
+.benefits + .partner,
+.partner + .eligibility,
+.eligibility + .career-journey,
+.career-journey + .faq-section,
+.faq-section + .final-cta-section,
+.final-cta-section + .adviora-cta,
+.adviora-cta + .premium-footer{
+
+    margin-top:0;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .adviora-about,
+    .opportunity,
+    .income,
+    .benefits,
+    .partner,
+    .eligibility,
+    .career-journey,
+    .faq-section,
+    .final-cta-section,
+    .adviora-cta{
+
+        padding:70px 20px;
+    }
+
+    .premium-footer{
+
+        padding:70px 20px 30px;
+    }
+}
 </style>
 
 <link rel="stylesheet"
