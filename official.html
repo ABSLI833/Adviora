@@ -101,13 +101,13 @@ html{
 
     align-items:center;
 
-    gap:15px;
+    gap:12px;
 
 }
 
 .official-logo img{
 
-    width:72px;
+    width:60px;
 
     border-radius:50%;
 
@@ -129,8 +129,8 @@ html{
 
     color:#666;
 
-    font-size:14px;
-
+    font-size:13px;
+font-weight:500;
 }
 
 /*==========================
@@ -181,7 +181,7 @@ html{
 
     display:inline-block;
 
-    padding:15px 34px;
+    padding:14px 30px;
 
     background:#f4b400;
 
@@ -204,6 +204,35 @@ html{
     color:#ffffff;
 
     transform:translateY(-3px);
+
+}
+    .official-menu a.active{
+
+    color:#d62d2d;
+
+    font-weight:700;
+
+    position:relative;
+
+}
+
+.official-menu a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:100%;
+
+    height:3px;
+
+    background:#f4b400;
+
+    border-radius:10px;
 
 }
 
@@ -303,7 +332,7 @@ html{
 
                 <h2>Adviora Official</h2>
 
-                <p>Customer Support & Policy Assistance</p>
+                <p>Insurance Customer Support & Policy Assistance</p>
 
             </div>
 
@@ -316,6 +345,7 @@ html{
         <ul class="official-menu">
 
             <li><a href="#home">Home</a></li>
+            <li><a href="#home" class="active">Home</a></li>
 
             <li><a href="#services">Services</a></li>
 
