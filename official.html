@@ -2309,63 +2309,52 @@ form.addEventListener("submit",async function(e){
 
     try{
 
-        const response=await fetch(SCRIPT_URL,{
+       fetch(SCRIPT_URL,{
+    method:"POST",
+    body:JSON.stringify(data)
+})
 
-            method:"POST",
+.then(response=>{
 
-            headers:{
-                "Content-Type":"application/json"
-            },
+    success.style.display="block";
 
-            body:JSON.stringify(data),
+    form.reset();
 
-            redirect:"follow"
+    dynamicFields.innerHTML="";
 
-        });
+    setTimeout(function(){
+
+        success.style.display="none";
+
+        closePopup();
+
+    },2500);
+
+})
+
+.catch(error=>{
+
+    console.error(error);
+
+    alert("Unable to submit your request.");
+
+})
+
+.finally(()=>{
+
+    submitBtn.disabled=false;
+
+    submitBtn.innerHTML="Submit Request";
+
+});
+
+return;
 
         if(!response.ok){
 
             throw new Error("Server Error");
 
         }
-
-        const result=await response.json();
-
-        if(result.result==="success"){
-
-            success.style.display="block";
-
-            form.reset();
-
-            dynamicFields.innerHTML="";
-
-            setTimeout(function(){
-
-                success.style.display="none";
-
-                closePopup();
-
-            },2500);
-
-        }else{
-
-            alert("Submission failed.");
-
-        }
-
-    }catch(error){
-
-        console.error(error);
-
-        alert("Unable to submit your request. Please try again.");
-
-    }finally{
-
-        submitBtn.disabled=false;
-
-        submitBtn.innerHTML="Submit Request";
-
-    }
 
 });  
 </script>    
