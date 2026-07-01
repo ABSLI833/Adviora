@@ -2042,32 +2042,43 @@ transparent);
 </div>
 
 <script>
-  /*=========================================
-        ADVIORA OFFICIAL
-        PART 1
-=========================================*/
+ /*=====================================================
+        ADVIORA OFFICIAL SUPPORT
+                PART 1
+=====================================================*/
 
-const modal = document.getElementById("supportModal");
-const popupTitle = document.getElementById("popupTitle");
-const dynamicFields = document.getElementById("dynamicFields");
-const serviceName = document.getElementById("serviceName");
-const form = document.getElementById("supportForm");
-const submitBtn = document.getElementById("submitBtn");
-const success = document.getElementById("successMessage");
+/*==============================
+        ELEMENTS
+==============================*/
 
-/*=========================================
-        OPEN POPUP
-=========================================*/
+const modal=document.getElementById("supportModal");
 
-document.querySelectorAll(".service-btn").forEach(button=>{
+const popupTitle=document.getElementById("popupTitle");
 
-    button.addEventListener("click",function(){
+const dynamicFields=document.getElementById("dynamicFields");
+
+const serviceName=document.getElementById("serviceName");
+
+const form=document.getElementById("supportForm");
+
+const submitBtn=document.getElementById("submitBtn");
+
+const success=document.getElementById("successMessage");
+
+
+/*==============================
+      OPEN POPUP
+==============================*/
+
+document.querySelectorAll(".service-btn").forEach(btn=>{
+
+    btn.addEventListener("click",function(){
 
         const service=this.dataset.service;
 
         serviceName.value=service;
 
-        popupTitle.textContent=service;
+        popupTitle.innerHTML=service;
 
         dynamicFields.innerHTML=getFields(service);
 
@@ -2079,9 +2090,10 @@ document.querySelectorAll(".service-btn").forEach(button=>{
 
 });
 
-/*=========================================
-        CLOSE POPUP
-=========================================*/
+
+/*==============================
+      CLOSE POPUP
+==============================*/
 
 function closePopup(){
 
@@ -2089,7 +2101,10 @@ function closePopup(){
 
 }
 
-document.querySelector(".close-modal").addEventListener("click",closePopup);
+
+document.querySelector(".close-modal")
+.addEventListener("click",closePopup);
+
 
 window.addEventListener("click",function(e){
 
@@ -2101,6 +2116,7 @@ window.addEventListener("click",function(e){
 
 });
 
+
 document.addEventListener("keydown",function(e){
 
     if(e.key==="Escape"){
@@ -2110,326 +2126,7 @@ document.addEventListener("keydown",function(e){
     }
 
 });
-
-/*=========================================
-        DYNAMIC FIELDS
-=========================================*/
-
-function getFields(service){
-
-switch(service){
-
-case "Claims Assistance":
-
-return `
-
-<div class="form-row">
-
-<select id="subject">
-
-<option value="">Select Claim Type</option>
-
-<option>Death Claim</option>
-
-<option>Maturity Claim</option>
-
-<option>Health Claim</option>
-
-<option>Other</option>
-
-</select>
-
-</div>
-
-<div class="form-row">
-
-<textarea id="query" placeholder="Describe your claim issue"></textarea>
-
-</div>
-
-`;
-
-case "Premium Payment":
-
-return `
-
-<div class="form-row">
-
-<select id="subject">
-
-<option value="">Select Issue</option>
-
-<option>Payment Failed</option>
-
-<option>Premium Due</option>
-
-<option>Payment Not Updated</option>
-
-<option>Need Payment Link</option>
-
-</select>
-
-</div>
-
-<div class="form-row">
-
-<textarea id="query" placeholder="Describe your payment issue"></textarea>
-
-</div>
-
-`;
-
-case "Policy Renewal":
-
-return `
-
-<div class="form-row">
-
-<input
-type="date"
-id="subject">
-
-</div>
-
-<div class="form-row">
-
-<textarea id="query" placeholder="Additional details"></textarea>
-
-</div>
-
-`;
-
-case "Policy Servicing":
-
-return `
-
-<div class="form-row">
-
-<select id="subject">
-
-<option value="">Select Service</option>
-
-<option>Address Update</option>
-
-<option>Email Update</option>
-
-<option>Mobile Update</option>
-
-<option>PAN Update</option>
-
-<option>Bank Details Update</option>
-
-</select>
-
-</div>
-
-<div class="form-row">
-
-<textarea id="query" placeholder="Describe your request"></textarea>
-
-</div>
-
-`;
-
-case "Policy Documents":
-
-return `
-
-<div class="form-row">
-
-<select id="subject">
-
-<option value="">Select Document</option>
-
-<option>Policy Bond</option>
-
-<option>Premium Receipt</option>
-
-<option>Tax Certificate</option>
-
-<option>Statement</option>
-
-</select>
-
-</div>
-
-`;
-
-case "Loan Against Policy":
-
-return `
-
-<div class="form-row">
-
-<input
-type="text"
-id="subject"
-placeholder="Required Loan Amount">
-
-</div>
-
-<div class="form-row">
-
-<textarea id="query" placeholder="Describe your requirement"></textarea>
-
-</div>
-
-`;
-
-case "Nominee & KYC Update":
-
-return `
-
-<div class="form-row">
-
-<select id="subject">
-
-<option value="">Select Update</option>
-
-<option>Nominee Update</option>
-
-<option>KYC Update</option>
-
-<option>PAN Update</option>
-
-<option>Aadhaar Update</option>
-
-</select>
-
-</div>
-
-`;
-
-default:
-
-return `
-
-<div class="form-row">
-
-<input
-type="text"
-id="subject"
-placeholder="Subject">
-
-</div>
-
-<div class="form-row">
-
-<textarea id="query" placeholder="Write your query"></textarea>
-
-</div>
-
-`;
-
-}
-
-}
-    /*=========================================
-      GOOGLE SHEET SUBMISSION
-=========================================*/
-
-const SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycbykIKRWfgzrtv99eNFh1rUaciCKjsPdmBcb67WECZq7cPtRtXp-avXeCqZFtulUQUK/exec";
-
-form.addEventListener("submit", async function(e){
-
-    e.preventDefault();
-
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = "Submitting...";
-
-    const formData = new FormData();
-
-    formData.append("service", serviceName.value);
-
-    formData.append(
-        "name",
-        document.getElementById("name").value
-    );
-
-    formData.append(
-        "mobile",
-        document.getElementById("mobile").value
-    );
-
-    formData.append(
-        "email",
-        document.getElementById("email").value
-    );
-
-    formData.append(
-        "policy",
-        document.getElementById("policy").value
-    );
-
-    const subject=document.getElementById("subject");
-
-    const query=document.getElementById("query");
-
-    formData.append(
-        "subject",
-        subject ? subject.value : ""
-    );
-
-    formData.append(
-        "query",
-        query ? query.value : ""
-    );
-
-    try{
-
-        const response = await fetch(SCRIPT_URL,{
-
-            method:"POST",
-
-            body:formData
-
-        });
-
-        if(!response.ok){
-
-            throw new Error("Server Error");
-
-        }
-
-        const result = await response.text();
-
-        console.log(result);
-
-        success.style.display="block";
-
-        form.reset();
-
-        dynamicFields.innerHTML="";
-
-        setTimeout(function(){
-
-            success.style.display="none";
-
-            closePopup();
-
-        },2500);
-
-    }
-
-    catch(error){
-
-        console.error(error);
-
-        alert("Unable to submit your request. Please try again.");
-
-    }
-
-    finally{
-
-        submitBtn.disabled=false;
-
-        submitBtn.innerHTML="Submit Request";
-
-    }
-
-});
-</script>    
+    
 </body>
 
 </html>
