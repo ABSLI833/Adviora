@@ -2272,6 +2272,75 @@ placeholder="Write your query"></textarea>
 }
 
 }
+    /*=====================================================
+            PART 3
+      GOOGLE SHEET SUBMISSION
+=====================================================*/
+
+const SCRIPT_URL="https://script.google.com/macros/s/AKfycbykIKRWfgzrtv99eNFh1rUaciCKjsPdmBcb67WECZq7cPtRtXp-avXeCq6ZFtulUQUK/exec";
+
+form.addEventListener("submit",async function(e){
+
+    e.preventDefault();
+
+    submitBtn.disabled=true;
+    submitBtn.innerHTML="Submitting...";
+
+    const formData=new FormData();
+
+    formData.append("service",serviceName.value);
+    formData.append("name",document.getElementById("name").value);
+    formData.append("mobile",document.getElementById("mobile").value);
+    formData.append("email",document.getElementById("email").value);
+    formData.append("policy",document.getElementById("policy").value);
+
+    const subject=document.getElementById("subject");
+    const query=document.getElementById("query");
+
+    formData.append("subject",subject ? subject.value : "");
+    formData.append("query",query ? query.value : "");
+
+    try{
+
+        const response=await fetch(SCRIPT_URL,{
+            method:"POST",
+            body:formData,
+            mode:"no-cors"
+        });
+
+        success.style.display="block";
+
+        form.reset();
+
+        dynamicFields.innerHTML="";
+
+        setTimeout(function(){
+
+            success.style.display="none";
+
+            closePopup();
+
+        },2500);
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        alert("Unable to submit request.");
+
+    }
+
+    finally{
+
+        submitBtn.disabled=false;
+
+        submitBtn.innerHTML="Submit Request";
+
+    }
+
+});
 </script>    
 </body>
 
