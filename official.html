@@ -2574,6 +2574,57 @@ form.addEventListener("submit",async function(e){
     submitBtn.innerHTML="Submit Request";
 });
 });
+    /*=====================================================
+                FAQ ACCORDION
+=====================================================*/
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+
+    const question = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+
+    question.addEventListener("click", function () {
+
+        const isActive = item.classList.contains("active");
+
+        // Close all FAQs
+        faqItems.forEach(faq => {
+
+            faq.classList.remove("active");
+
+            faq.querySelector(".faq-answer").style.maxHeight = null;
+
+        });
+
+        // Open selected FAQ
+        if (!isActive) {
+
+            item.classList.add("active");
+
+            answer.style.maxHeight = answer.scrollHeight + "px";
+
+        }
+
+    });
+
+});
+
+
+/*==============================
+      OPEN FIRST FAQ
+==============================*/
+
+const firstFaq = document.querySelector(".faq-item.active");
+
+if (firstFaq) {
+
+    const firstAnswer = firstFaq.querySelector(".faq-answer");
+
+    firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
+
+}
         </script>
 <!-- =========================
      FAQ SECTION START
